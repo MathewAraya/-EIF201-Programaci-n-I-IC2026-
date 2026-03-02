@@ -1,5 +1,6 @@
 #include "Matriz.h"
 #include <iostream>
+#include <iomanip>
 
 const int filas = 3;
 const int columnas = 3;
@@ -24,14 +25,11 @@ void leerMatriz()
 void imprimirMatriz()
 {
 	for (int i = 0; i < filas; i++) {
-		
 		for (int j = 0; j < columnas; j++) {
-			std::cout<< " " << datos[i][j];
+			std::cout << std::setw(6) << datos[i][j];
 		}
-		std::cout << " " << std::endl;
+		std::cout << std::endl;
 	}
-
-
 }
 
 int sumarFilas()
